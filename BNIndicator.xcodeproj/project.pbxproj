@@ -21,6 +21,11 @@
 		9B07EDD815E36826004317A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B07EDB615E36825004317A8 /* Foundation.framework */; };
 		9B07EDE015E36826004317A8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B07EDDE15E36826004317A8 /* InfoPlist.strings */; };
 		9B07EDE315E36826004317A8 /* BNIndicatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B07EDE215E36826004317A8 /* BNIndicatorTests.m */; };
+		9B07EDEF15E36899004317A8 /* BNIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B07EDEE15E36899004317A8 /* BNIndicator.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		9B07EDF015E36899004317A8 /* BNIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B07EDEE15E36899004317A8 /* BNIndicator.m */; };
+		9B07EDF315E368AF004317A8 /* BNIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B07EDF215E368AF004317A8 /* BNIndicatorView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		9B07EDF415E368AF004317A8 /* BNIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B07EDF215E368AF004317A8 /* BNIndicatorView.m */; };
+		9BA698D615E3BB56002F1929 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA698D515E3BB56002F1929 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,11 @@
 		9B07EDDF15E36826004317A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9B07EDE115E36826004317A8 /* BNIndicatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNIndicatorTests.h; sourceTree = "<group>"; };
 		9B07EDE215E36826004317A8 /* BNIndicatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNIndicatorTests.m; sourceTree = "<group>"; };
+		9B07EDED15E36899004317A8 /* BNIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNIndicator.h; sourceTree = "<group>"; };
+		9B07EDEE15E36899004317A8 /* BNIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNIndicator.m; sourceTree = "<group>"; };
+		9B07EDF115E368AF004317A8 /* BNIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNIndicatorView.h; sourceTree = "<group>"; };
+		9B07EDF215E368AF004317A8 /* BNIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNIndicatorView.m; sourceTree = "<group>"; };
+		9BA698D515E3BB56002F1929 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BA698D615E3BB56002F1929 /* QuartzCore.framework in Frameworks */,
 				9B07EDB515E36825004317A8 /* UIKit.framework in Frameworks */,
 				9B07EDB715E36825004317A8 /* Foundation.framework in Frameworks */,
 				9B07EDB915E36825004317A8 /* CoreGraphics.framework in Frameworks */,
@@ -83,6 +94,7 @@
 		9B07EDA515E36825004317A8 = {
 			isa = PBXGroup;
 			children = (
+				9BA698D515E3BB56002F1929 /* QuartzCore.framework */,
 				9B07EDBA15E36825004317A8 /* BNIndicator */,
 				9B07EDDB15E36826004317A8 /* BNIndicatorTests */,
 				9B07EDB315E36825004317A8 /* Frameworks */,
@@ -113,6 +125,7 @@
 		9B07EDBA15E36825004317A8 /* BNIndicator */ = {
 			isa = PBXGroup;
 			children = (
+				9B07EDEC15E36831004317A8 /* BNIndicator */,
 				9B07EDC315E36825004317A8 /* BNAppDelegate.h */,
 				9B07EDC415E36825004317A8 /* BNAppDelegate.m */,
 				9B07EDC615E36825004317A8 /* BNViewController.h */,
@@ -152,6 +165,17 @@
 				9B07EDDE15E36826004317A8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9B07EDEC15E36831004317A8 /* BNIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				9B07EDED15E36899004317A8 /* BNIndicator.h */,
+				9B07EDEE15E36899004317A8 /* BNIndicator.m */,
+				9B07EDF115E368AF004317A8 /* BNIndicatorView.h */,
+				9B07EDF215E368AF004317A8 /* BNIndicatorView.m */,
+			);
+			path = BNIndicator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +290,8 @@
 				9B07EDC115E36825004317A8 /* main.m in Sources */,
 				9B07EDC515E36825004317A8 /* BNAppDelegate.m in Sources */,
 				9B07EDC815E36825004317A8 /* BNViewController.m in Sources */,
+				9B07EDEF15E36899004317A8 /* BNIndicator.m in Sources */,
+				9B07EDF315E368AF004317A8 /* BNIndicatorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +300,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B07EDE315E36826004317A8 /* BNIndicatorTests.m in Sources */,
+				9B07EDF015E36899004317A8 /* BNIndicator.m in Sources */,
+				9B07EDF415E368AF004317A8 /* BNIndicatorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +372,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,7 +392,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -379,6 +407,7 @@
 				GCC_PREFIX_HEADER = "BNIndicator/BNIndicator-Prefix.pch";
 				INFOPLIST_FILE = "BNIndicator/BNIndicator-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -390,6 +419,7 @@
 				GCC_PREFIX_HEADER = "BNIndicator/BNIndicator-Prefix.pch";
 				INFOPLIST_FILE = "BNIndicator/BNIndicator-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -447,6 +477,7 @@
 				9B07EDE815E36826004317A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B07EDE915E36826004317A8 /* Build configuration list for PBXNativeTarget "BNIndicatorTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +486,7 @@
 				9B07EDEB15E36826004317A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
