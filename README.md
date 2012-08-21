@@ -1,10 +1,12 @@
 # BNIndicator
 
-Very simple indicator for iOS
+Very simple indicator for iOS.
+
+(Supporting ARC/Non-ARC project.)
 
 ## How to use
 
-* Copy `BNIndicator.h`, `BNIndicator.m` to your projects.
+* Copy `BNIndicator.h`, `BNIndicator.m`, `BNIndicatorView.h`, `BNIndicatorView.m` to your projects.
 * Add `QuartzCore.framework` in Build Phases.
 * Import `BNIndicator.h`.
 * Call `[[BNIndicator showForView:]`.
