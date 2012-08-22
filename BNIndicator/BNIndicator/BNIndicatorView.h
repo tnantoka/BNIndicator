@@ -10,6 +10,6 @@
 
 @interface BNIndicatorView : UIView
 
-- (id)initWithMessage:(NSString *)message;
+- (id)initWithMessage:(NSString *)message size:(float)size;
 
 @end

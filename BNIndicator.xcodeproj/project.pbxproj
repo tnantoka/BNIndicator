@@ -14,8 +14,6 @@
 		9B07EDC115E36825004317A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B07EDC015E36825004317A8 /* main.m */; };
 		9B07EDC515E36825004317A8 /* BNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B07EDC415E36825004317A8 /* BNAppDelegate.m */; };
 		9B07EDC815E36825004317A8 /* BNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B07EDC715E36825004317A8 /* BNViewController.m */; };
-		9B07EDCB15E36825004317A8 /* BNViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B07EDC915E36825004317A8 /* BNViewController_iPhone.xib */; };
-		9B07EDCE15E36825004317A8 /* BNViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B07EDCC15E36825004317A8 /* BNViewController_iPad.xib */; };
 		9B07EDD615E36826004317A8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B07EDD515E36825004317A8 /* SenTestingKit.framework */; };
 		9B07EDD715E36826004317A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B07EDB415E36825004317A8 /* UIKit.framework */; };
 		9B07EDD815E36826004317A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B07EDB615E36825004317A8 /* Foundation.framework */; };
@@ -51,8 +49,6 @@
 		9B07EDC415E36825004317A8 /* BNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNAppDelegate.m; sourceTree = "<group>"; };
 		9B07EDC615E36825004317A8 /* BNViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNViewController.h; sourceTree = "<group>"; };
 		9B07EDC715E36825004317A8 /* BNViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNViewController.m; sourceTree = "<group>"; };
-		9B07EDCA15E36825004317A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BNViewController_iPhone.xib; sourceTree = "<group>"; };
-		9B07EDCD15E36825004317A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BNViewController_iPad.xib; sourceTree = "<group>"; };
 		9B07EDD415E36825004317A8 /* BNIndicatorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BNIndicatorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B07EDD515E36825004317A8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		9B07EDDD15E36826004317A8 /* BNIndicatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BNIndicatorTests-Info.plist"; sourceTree = "<group>"; };
@@ -130,8 +126,6 @@
 				9B07EDC415E36825004317A8 /* BNAppDelegate.m */,
 				9B07EDC615E36825004317A8 /* BNViewController.h */,
 				9B07EDC715E36825004317A8 /* BNViewController.m */,
-				9B07EDC915E36825004317A8 /* BNViewController_iPhone.xib */,
-				9B07EDCC15E36825004317A8 /* BNViewController_iPad.xib */,
 				9B07EDBB15E36825004317A8 /* Supporting Files */,
 			);
 			path = BNIndicator;
@@ -251,8 +245,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B07EDBF15E36825004317A8 /* InfoPlist.strings in Resources */,
-				9B07EDCB15E36825004317A8 /* BNViewController_iPhone.xib in Resources */,
-				9B07EDCE15E36825004317A8 /* BNViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,22 +314,6 @@
 				9B07EDBE15E36825004317A8 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		9B07EDC915E36825004317A8 /* BNViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9B07EDCA15E36825004317A8 /* en */,
-			);
-			name = BNViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		9B07EDCC15E36825004317A8 /* BNViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9B07EDCD15E36825004317A8 /* en */,
-			);
-			name = BNViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 		9B07EDDE15E36826004317A8 /* InfoPlist.strings */ = {

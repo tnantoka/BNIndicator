@@ -9,7 +9,7 @@ Very simple indicator for iOS.
 * Copy `BNIndicator.h`, `BNIndicator.m`, `BNIndicatorView.h`, `BNIndicatorView.m` to your projects.
 * Add `QuartzCore.framework` in Build Phases.
 * Import `BNIndicator.h`.
-* Call `[[BNIndicator showForView:]`.
+* Call `[BNIndicator showForView:]`.
 
 ## Example
 

@@ -12,6 +12,8 @@
 
 + (void)showForView:(UIView *)view;
 + (void)showForView:(UIView *)view withMessage:(NSString *)message;
++ (void)showForView:(UIView *)view withSize:(float)size;
++ (void)showForView:(UIView *)view withMessage:(NSString *)message size:(float)size;
 
 + (void)hideForView:(UIView *)view;
 

@@ -23,36 +23,12 @@
 
     self.view.backgroundColor = [UIColor whiteColor];
     
-    float margin = 5.0f;
-    
-    UIButton *plainButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [plainButton setTitle:@"Plain" forState:UIControlStateNormal];
-    [plainButton addTarget:self action:@selector(plainAction:) forControlEvents:UIControlEventTouchUpInside];
-    plainButton.frame = CGRectMake(margin, margin, 0, 0);
-    [plainButton sizeToFit];
-    [self.view addSubview:plainButton];
+    UIButton *plainButton = [self _addButtonWithTitle:@"Plain" action:@selector(plainAction:)];
+    UIButton *messageButton = [self _addButtonWithTitle:@"Message" action:@selector(messageAction:)];
+    UIButton *sizeButton = [self _addButtonWithTitle:@"Size" action:@selector(sizeAction:)];
+    UIButton *hideButton = [self _addButtonWithTitle:@"Hide" action:@selector(hideAction:)];
 
-    UIButton *messageButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [messageButton setTitle:@"Loading" forState:UIControlStateNormal];
-    [messageButton addTarget:self action:@selector(enMessageAction:) forControlEvents:UIControlEventTouchUpInside];
-    messageButton.frame = CGRectMake(plainButton.frame.origin.x + plainButton.frame.size.width + margin, margin, 0, 0);
-    [messageButton sizeToFit];
-    [self.view addSubview:messageButton];
-
-    UIButton *messageButton2 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [messageButton2 setTitle:@"読込中" forState:UIControlStateNormal];
-    [messageButton2 addTarget:self action:@selector(jaMessageAction:) forControlEvents:UIControlEventTouchUpInside];
-    messageButton2.frame = CGRectMake(messageButton.frame.origin.x + messageButton.frame.size.width + margin, margin, 0, 0);
-    [messageButton2 sizeToFit];
-    [self.view addSubview:messageButton2];
-
-    UIButton *hideButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [hideButton setTitle:@"Hide" forState:UIControlStateNormal];
-    [hideButton addTarget:self action:@selector(hideAction:) forControlEvents:UIControlEventTouchUpInside];
-    hideButton.frame = CGRectMake(messageButton2.frame.origin.x + messageButton2.frame.size.width + margin, margin, 0, 0);
-    [hideButton sizeToFit];
-    [self.view addSubview:hideButton];
-
+    [self _layoutViews:[NSArray arrayWithObjects:plainButton, messageButton, sizeButton, hideButton, nil] withMargin:5.0f];
 }
 
 - (void)viewDidUnload
@@ -76,16 +52,37 @@
     [BNIndicator showForView:self.view];
 }
 
-- (void)enMessageAction:(id)sender {
+- (void)messageAction:(id)sender {
     [BNIndicator showForView:self.view withMessage:@"Loading"];
 }
 
-- (void)jaMessageAction:(id)sender {
-    [BNIndicator showForView:self.view withMessage:@"読込中"];
+- (void)sizeAction:(id)sender {
+    [BNIndicator showForView:self.view withMessage:@"Loading" size:100.0f];
 }
 
 - (void)hideAction:(id)sender {
     [BNIndicator hideForView:self.view];
 }
+
+# pragma mark - Utilities
+
+- (UIButton *)_addButtonWithTitle:(NSString *)title action:(SEL)action {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [button setTitle:title forState:UIControlStateNormal];
+    [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
+    [button sizeToFit];
+    [self.view addSubview:button];
+    return button;
+}
+
+- (void)_layoutViews:(NSArray *)views withMargin:(float)margin {
+    int x = margin;
+    for (int i = 0; i < views.count; i++) {
+        UIView *view = [views objectAtIndex:i];
+        view.frame = CGRectMake(x, margin, view.frame.size.width, view.frame.size.height);
+        x += view.frame.size.width + margin;
+    }
+}
+
 
 @end
